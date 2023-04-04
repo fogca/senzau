@@ -46,7 +46,7 @@ export let data;
     <h1 class="h2">{ @html data.title }</h1>
     <h2 class="h7" lang="en">{ @html data.title_eng }</h2>
     <p>{ @html data.top_body }</p>
-    <a href="h7" lang="en">Gallery</a>
+    <a href="/gallery" lang="en" class="h7">Gallery</a>
   </div>  
 </section>
 
