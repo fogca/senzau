@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*
+html, body {animation: bgColor 3s cubic-bezier(1,0,.5,1);}
+html, body {animation: textColor 3s cubic-bezier(1,0,.5,1);}
+*/
+
+
+.work-top, .product-top {animation: visualColor 1.5s cubic-bezier(1,0,.5,1);}
+
+.work-top .wrapper .container h2, .serif {
+    font-family: garamond-premier-pro-display, 'Noto Serif JP', '游明朝 Medium', yumincho, yu-mincho, serif;
+    letter-spacing: .05em;
+}
+.link h2 {display: none;}
+.link .serif {letter-spacing: .03em;}
+
+@keyframes visualColor {
+    0% {filter: saturate(0);}
+    100% {filter: saturate(1);}
+}
+@keyframes bgColor {
+    0% {background-color: black;}
+    50% {background-color: white;}
+    100% {background-color: black;}
+}
+
+@keyframes textColor {
+    0% {background-color: black;}
+    50% {background-color: black;}
+    100% {background-color: white;}
+}
+
+.first-section {padding-top: 7rem;}
+section,
+.Index section, .Work section, .Product section,
+.About section, .Contact section, .Slug section {padding-left: 25%;}
+
+@media screen and (max-width: 480px) {
+
+    section, .Index section, .Work section, .Product section,
+    .About section, .Contact section, .Slug section {
+        padding-right: var(--padding);
+        padding-left: var(--padding);
+    }
+    .first-section {padding-top: 15rem;}
+
+    
+}
