@@ -14,16 +14,15 @@ export let data;
 </script>
 
 <svelte:head>
-  <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=uYXeq59q~wA%3D&aa=1&ab=2"></script>
   <link rel="stylesheet" href="../css/swiper.css?var=1.12">
-  <title>etc inc. - Space direction</title>
+  <title>Senzau | Film Production</title>
 	<meta name="description" content="吉田愛率いる、et cetera inc. 空間にまつわるデザインを手掛けています。">
-	<meta property="og:url" content="https://et-cetera.co.jp/"/>
-	<meta property="og:title" content="etc inc. - Space direction"/>
+	<meta property="og:url" content="https://senzau.com/"/>
+	<meta property="og:title" content="Senzau | Film Production"/>
 	<meta property="og:description" content="吉田愛率いる、et cetera inc. 空間にまつわるデザインを手掛けています。"/>
 	
 	<meta property="og:type" content="website"/>
-	<meta property="og:site_name" content="etc inc. - Space direction"/>
+	<meta property="og:site_name" content="Senzau | Film Production"/>
 	<meta property="og:image" content="サムネイル画像のURL"/>
 </svelte:head>
 

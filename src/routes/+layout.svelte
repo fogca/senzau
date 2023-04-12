@@ -6,13 +6,14 @@ import Footer from '../components/Footer.svelte';
 import { onMount } from 'svelte';
 import { afterNavigate, disableScrollHandling } from '$app/navigation';
 
+/*
 onMount(async () => {
     window.setTimeout(function(){
       //FONTPLUS.start();
       FONTPLUS.reload(false)
     }, 100);
 });
-
+*/
 
 /** @type {import('./$types').LayoutData} */
     export let data;
