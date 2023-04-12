@@ -3,15 +3,6 @@
 	import Saos from "saos";
     import { onDestroy, onMount, afterUpdate } from 'svelte';
     import { browser } from "$app/environment";
-    
-    onMount(() => {
-        
-        window.setTimeout(function(){
-            //FONTPLUS.start();
-            FONTPLUS.reload(false)
-        }, 100);
-    
-    });
 
 
 /** @type {import('./$types').PageData} */
