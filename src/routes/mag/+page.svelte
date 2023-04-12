@@ -25,7 +25,8 @@ export let data;
 			{#if data[0].contents}
 			{#each data[0].contents as content}
 			<a href="/mag/{content.id}/">
-				{content.title}
+				<img src="{content.thumbnail.url}" alt="">
+				<h2>{content.title}</h2>
 			</a>
 			{/each}
 			{/if}

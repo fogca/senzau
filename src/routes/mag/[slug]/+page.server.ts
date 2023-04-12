@@ -1,4 +1,3 @@
-import { error } from '@sveltejs/kit';
 import { client } from '../../../libs/client';
 import type { MicroCMSObjectContent, MicroCMSListResponse } from 'microcms-js-sdk';
 
@@ -8,51 +7,81 @@ type Post = {
 	url: URL;
 	id: string;
 	title: string;
-	scope: string;
-	link: string;
-	description: string;
-	next: HTMLElement;
 	thumbnail: {url: string;}
 	body: HTMLElement;
-	credit: HTMLElement;
-	direction: string;
-	work: string;
-	content: string;
-	client: string;
-	html: HTMLElement;
-	repeatImg: HTMLElement;
-	images: {url: string;}
+  eng: string;
+  seo: string;
 };
 
 type Props = {
 	params: {
 		slug: string;
+    
 	};
 };
 
 
+
+
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function load({ params }: Props) {
+  const { slug } = params;
 
 
-	const res = await Promise.all([
-		client.get<MicroCMSObjectContent & Post>({
-			endpoint: 'magazine',
-			contentId: params.slug
-		})
-	])
-	
-	/*
-	const index = res[1].contents.findIndex((content) => content.id === params.slug);
-    const next = res[1].contents[index + 1];
-	*/
-	
-	if (res) {
-		console.log(res);
-		return { 
-			...res
-		}
-	}
-	
-	throw error(404, 'Not found');
+  const [currentPost, allPosts] = await Promise.all([
+    client.get<MicroCMSObjectContent & Post>({
+      endpoint: 'magazine',
+      contentId: slug,
+    }),
+    client.get<MicroCMSListResponse<Post>>({
+      endpoint: 'magazine',
+      queries: {
+        fields: 'id,slug',
+        filters: `publishedAt[greaterThan]${new Date().toISOString()}`,
+        orders: '-publishedAt',
+        limit: 2,
+      },
+    }),
+  ]);
+
+  const currentIndex = allPosts.contents.findIndex(
+    (post) => post.id === currentPost.id
+  );
+
+  const prevPost = currentIndex < allPosts.contents.length - 1 ? allPosts.contents[currentIndex + 1] : null;
+  const nextPost = currentIndex > 0 ? allPosts.contents[currentIndex - 1] : null;
+
+  return {
+    //body: {
+      ...currentPost,
+      ...prevPost,
+      ...nextPost,
+    //}
+  };
+
+
+
+
+
+
+
+
+
+    /*
+    nextArticle: nextArticle.length > 0 ? nextArticle[0] : null,
+    prevArticle: prevArticle.length > 0 ? prevArticle[0] : null,
+    ...nextArticle,
+    ...prevArticle
+    */
+    
+
+  /*
+  return {
+    body: {
+      currentArticle,
+      nextArticle: nextArticle.length > 0 ? nextArticle[0] : null,
+      prevArticle: prevArticle.length > 0 ? prevArticle[0] : null,
+    },
+  };
+  */
 }

@@ -27,7 +27,7 @@ onMount(async () => {
   <link rel="stylesheet" href="../css/mojikumi.css?var=1.16">
   <link rel="stylesheet" href="../css/prerendering.css?var=1.16">
   <link rel="stylesheet" href="https://use.typekit.net/jxf2bza.css">
-
+  <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2"></script>
   <script>
     (function(d) {
       var config = {

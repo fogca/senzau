@@ -47,6 +47,7 @@ export let data;
     <h2 class="h7" lang="en">{ @html data.title_eng }</h2>
     <p>{ @html data.top_body }</p>
     <a href="/gallery" lang="en" class="h7">Gallery</a>
+    <a href="/mag" lang="en" class="h7">Magazine</a>
   </div>  
 </section>
 
@@ -67,12 +68,12 @@ export let data;
 
     <div class="container">
       <div class="l-head">
-        <h1 class="h7" lang="en">Digitalisation</h1>
+        <h1 class="h7" lang="en">Reversalisation</h1>
         <div class="h7" lang="en">02</div>
       </div>
       <img src="../image/3.webp" alt="">
-      <h2 lang="en">35mm / 120 Film Scanning</h2>
-      <h3 class="h6 half">ライカ判・ブローニーのデジタライズ</h3>
+      <h2 lang="en">Colour Reversal from Negative</h2>
+      <h3 class="h6 half">ネガティブフィルムのポジティブ反転</h3>
       <p>そのものがセンサーであることから、豊かな色彩と階調をもつフィルム。中判フィルムが捉える景色は数億画素を超えるとも言われており、その豊かな画を写すため50MPの解像度で、微細なノイズまでをも切り取ります。</p>
     </div>
 
@@ -136,22 +137,41 @@ export let data;
   100% {transform: translateY(0);opacity: 1;}
 }
 
+#top {
+  position: relative;
+  overflow-x: hidden;
+}
 #top .wrapper {
   padding-top: 11.5vh;
   padding-top: 11.5dvh;
 }
 #top .wrapper h2 {margin: 1.5rem 0 3rem;}
-#top .wrapper a {margin-top: 4rem;}
+#top .wrapper a {
+  margin-top: 4rem;
+  margin-right: 2rem;
+  position: relative;
+}
+#top .wrapper a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  height: .5px;
+  background-color: var(--textColor);
+  top: auto;
+  bottom: -2px;
+}
 
 .float svg:nth-of-type(1) {
   position: absolute;
   left: 0;
-  top: -1.8rem;
+  top: -1.7rem;
 }
 .float svg:nth-of-type(2) {
   position: absolute;
   left: auto;
-  right: -1.8rem;
+  right: -1.7rem;
   top: 0;
 }
 
