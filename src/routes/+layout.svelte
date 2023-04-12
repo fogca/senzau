@@ -22,7 +22,7 @@ onMount(async () => {
 </script>
   
 <svelte:head>
-  <link rel="stylesheet" href="../css/base.css?var=1.18">
+  <link rel="stylesheet" href="../css/base.css?var=1.19">
   <link rel="stylesheet" href="../css/main.css?var=1.17">
   <link rel="stylesheet" href="../css/layout.css?var=1.17">
   <link rel="stylesheet" href="../css/mojikumi.css?var=1.16">

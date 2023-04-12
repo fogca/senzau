@@ -12,9 +12,8 @@
     font-weight: 400; 
     src: url('https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2');
 }
-
 @font-face { 
-    font-family: TsukuGoPr5-M; 
+    font-family: TsukuGoPro-M; 
     font-weight: 400; 
     src: url('https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2');
 }
@@ -52,7 +51,7 @@ html, body {
 div, h1, h2, h3, h4, h5, h6, p, a, span, button, tspan {
     font-family: neue-haas-unica, TsukuGoPro-R, TsukuGoPr5-R, "Yu Gothic Medium","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     font-family: neue-haas-unica, TsukuGoPr5-M, TsukuGoPro-M, "Yu Gothic Medium","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-family: neue-haas-unica, TsukuGoPr5-M, 'TsukuGoPr5-M', "fot-cezanne-pron", sans-serif;
+    font-family: neue-haas-unica, TsukuGoPr5-M, TsukuGoPro-M, 'TsukuGoPr5-M', "fot-cezanne-pron", sans-serif;
     font-weight: 400;
     font-style: normal;;
 
