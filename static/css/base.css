@@ -12,11 +12,6 @@
     font-weight: 400; 
     src: url('https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2');
 }
-@font-face { 
-    font-family: TsukuGoPro-M; 
-    font-weight: 400; 
-    src: url('https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2');
-}
 
 /*
 @font-face { font-family: 'FOT-筑紫ゴシック Pr5 M'; font-weight: bold; src: url('https://webfont.fontplus.jp/accessor/reqf/con=fp_a9584f131323b7a69ec403c1442164a4&cha=UTF-8&dmode=&aa=1&ab=0&l=aHR0cHMlM0ElMkYlMkZ3d3cua3lvdG8tYXJ0LmFjLmpwJTJGdCUyRg==&chws=&t=0&fa=Rk9ULeetkee0q-OCtOOCt-ODg-OCryBQcjUgTQ&lst=0&lsc=0&s=MTM3RU1OT1BTVFXjgIDjgIHjgILjgIXjgYLjgYTjgYrjgYvjgYzjgY3jgY_jgZHjgZPjgZXjgZfjgZrjgZvjgZ_jgaDjgaHjgaTjgabjgafjganjgarjgavjga7jgbLjgbPjgbbjgbnjgoHjgoLjgoTjgojjgonjgovjgo_jgpLjgqLjgqPjgqTjgqrjgqzjgq3jgq_jgrDjgrHjgrPjgrXjgrbjgrfjgrnjgrvjgr_jg4Pjg4Tjg4bjg4fjg4jjg4njg5Hjg5Pjg5Xjg5fjg5njg53jg57jg5_jg6Pjg6Xjg6fjg6njg6rjg6zjg63jg7Pjg7vjg7zkuIDkuI3kuK3kuovkuqzkurrku4vkvJrkvJ3kv6Hkv67lhYXlhaXlhajlhazlhbHlhoXlhpnlh7rliLbliqDljJbljZLljZrlj4vlj5blj7LlkIjlkozlk6HllY_lm57lnKjloLHlo7DlpInlpKflrZDlrablroXlrozlrp_lsYrlsaXluLjlubTluqflu7rlvI_lvaLlvozlvpfmg4XmhYvmiLvmiYvmjojmlZnmlofmlpnmlrDmlrnml6XmmI7mm7jmnIDmnKvmnKzmnZDmn5PmoLzmoYjmpa3mp5jmqZ_mrbTmsJfmtIvmt7HmvJTngrnniannibnnlJ_nlKPnlLvnmbrnmoTnm67nm7jnnJ_np5HnqIvnqbrnrYnnr4nntLnntbHnuZTnv5LogrLoh6roiI7oirjol53ooZPopoHopovoppbopqfoqJjoqqzoqrLoq4forJvosrvos4fos6rot7Xov73pgJrpgLHpgbrpg6jpg73ph5HplbfplovplpPpmaLpmbbppIrppKjvvIHvvIjvvInvvIvvvZ4&ivs=0'); }
@@ -51,7 +46,7 @@ html, body {
 div, h1, h2, h3, h4, h5, h6, p, a, span, button, tspan {
     font-family: neue-haas-unica, TsukuGoPro-R, TsukuGoPr5-R, "Yu Gothic Medium","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     font-family: neue-haas-unica, TsukuGoPr5-M, TsukuGoPro-M, "Yu Gothic Medium","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-family: neue-haas-unica, TsukuGoPr5-M, TsukuGoPro-M, 'TsukuGoPr5-M', "fot-cezanne-pron", sans-serif;
+    font-family: neue-haas-unica, TsukuGoPr5-M, 'TsukuGoPr5-M', "fot-cezanne-pron", sans-serif;
     font-weight: 400;
     font-style: normal;;
 
