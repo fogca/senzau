@@ -22,8 +22,8 @@ export let data;
 	<section class="article">
 		<div class="head">
 			<img src="{data.thumbnail.url}" alt="" class="thumbnail">
-			<h1 class="h3">{@html data.title}</h1>
-			<h2 lang="en" class="h6">{@html data.eng}</h2>
+			<h1 class="h2">{@html data.title}</h1>
+			<h2 lang="en" class="h5">{@html data.eng}</h2>
 		</div>
 
 		<div class="body">{@html data.body}</div>
@@ -76,7 +76,21 @@ export let data;
 }
 
 .head {margin-bottom: 5rem;}
-.head h1 {margin: 4rem 0 1.5rem;}
+.head h1 {
+	margin: 4rem 0 1.5rem;
+	margin-left: -1.5px;
+}
+
+
+.body {
+	/*
+	overflow: scroll;
+	display: flex;
+	justify-content: flex-end;
+    width: 100vw;
+    margin-left: calc(-1 * var(--padding));
+	*/
+}
 
 
 
