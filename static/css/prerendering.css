@@ -1,4 +1,10 @@
 
+.svelte-compare-image-container {height: 100% !important;}
+.svelte-compare-image-container:focus-within {outline: none !important;}
+
+
+
+
 #mag * {
   color: var(--backgroundColor);
   color: #181818;
@@ -7,18 +13,7 @@
   
   letter-spacing: .01em;
   line-height: 2.2;
-  font-size: 1.425rem;
+  font-size: 1.4rem;
   text-align: justify;
 
-  /* 縦書き */
-  /*
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  text-align: left;
-  font-feature-settings: 'pkna';
-  height: 50vh;
-  line-height: 2;
-  letter-spacing: .01em;
-  padding-bottom: 7.5rem;
-  */
 }

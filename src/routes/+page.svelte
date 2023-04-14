@@ -7,6 +7,8 @@ import "swiper/css";
 import 'swiper/css/effect-fade';
 import "swiper/css/pagination";
 import { Autoplay, EffectFade } from "swiper";
+  import CompareImage from "svelte-compare-image/CompareImage.svelte";
+
 
 /** @type {import('./$types').PageData} */
 export let data;
@@ -24,6 +26,7 @@ export let data;
 	<meta property="og:type" content="website"/>
 	<meta property="og:site_name" content="Senzau | Film Production"/>
 	<meta property="og:image" content="サムネイル画像のURL"/>
+
 </svelte:head>
 
 
@@ -59,7 +62,16 @@ export let data;
         <h1 class="h7" lang="en">Digitalisation</h1>
         <div class="h7" lang="en">01</div>
       </div>
-      <img src="../image/3.webp" alt="">
+      <!--
+      <picture>
+        <source srcset="{`${repeat.images.url}?fm=avif&q=60&width=580`} 1x, {`${repeat.images.url}?fm=avif&q=75&width=720`} 2x," media="(max-width: 599px)" type="image/avif">
+        <source srcset="{`${repeat.images.url}?fm=avif&q=60&width=580`} 1x, {`${repeat.images.url}?fm=avif&q=800&width=2440`} 2x," media="(min-width: 600px)" type="image/avif">
+        <source srcset="{`${repeat.images.url}?fm=webp&q=60&width=580`} 1x, {`${repeat.images.url}?fm=webp&q=75&width=720`} 2x," media="(max-width: 599px)" type="image/webp">
+        <source srcset="{`${repeat.images.url}?fm=webp&q=60&width=580`} 1x, {`${repeat.images.url}?fm=webp&q=80&width=2440`} 2x," media="(min-width: 600px)" type="image/webp">
+        <img src={repeat.images.url} alt="{data[0].title}" class="repeat">
+      </picture>
+      -->
+      <img src="../image/1.jpg" alt="">
       <h2 lang="en">35mm / 120 Film Scanning</h2>
       <h3 class="h6 half">ライカ判・ブローニーのデジタライズ</h3>
       <p>そのものがセンサーであることから、豊かな色彩と階調をもつフィルム。中判フィルムが捉える景色は数億画素を超えるとも言われており、その豊かな画を写すため50MPの解像度で、微細なノイズまでをも切り取ります。</p>
@@ -70,7 +82,7 @@ export let data;
         <h1 class="h7" lang="en">Reversalisation</h1>
         <div class="h7" lang="en">02</div>
       </div>
-      <img src="../image/3.webp" alt="">
+      <img src="../image/2.jpg" alt="">
       <h2 lang="en">Colour Reversal from Negative</h2>
       <h3 class="h6 half">ネガティブフィルムのポジティブ反転</h3>
       <p>そのものがセンサーであることから、豊かな色彩と階調をもつフィルム。中判フィルムが捉える景色は数億画素を超えるとも言われており、その豊かな画を写すため50MPの解像度で、微細なノイズまでをも切り取ります。</p>
@@ -81,13 +93,43 @@ export let data;
         <h1 class="h7" lang="en">Digitalisation</h1>
         <div class="h7" lang="en">03</div>
       </div>
-      <img src="../image/3.webp" alt="">
+      <img src="../image/3.jpg" alt="">
       <h2 lang="en">35mm / 120 Film Scanning</h2>
       <h3 class="h6 half">ライカ判・ブローニーのデジタライズ</h3>
       <p>そのものがセンサーであることから、豊かな色彩と階調をもつフィルム。中判フィルムが捉える景色は数億画素を超えるとも言われており、その豊かな画を写すため50MPの解像度で、微細なノイズまでをも切り取ります。</p>
     </div>
 
   </div>
+</section>
+
+<section id="compare">
+
+  <div class="container">
+  <CompareImage
+    imageLeftSrc="../image/1.jpg"
+    imageLeftAlt="left"
+    imageRightSrc="../image/2.jpg"
+    imageRightAlt="right"
+    --handle-size="2.5rem"
+    --slider-color="#ffffff"
+    --slider-width="0.125rem"
+  />
+  <div class="h7 half" lang="en">Left:1MP / Right: 51MP</div>
+  </div>
+
+  <div class="container">
+    <CompareImage
+      imageLeftSrc="../image/2.jpg"
+      imageLeftAlt="left"
+      imageRightSrc="../image/1.jpg"
+      imageRightAlt="right"
+      --handle-size="2.5rem"
+      --slider-color="#ffffff"
+      --slider-width="0.125rem"
+    />
+    <div class="h7 half" lang="en">Left:1MP / Right: 51MP</div>
+  </div>
+
 </section>
 
 
@@ -187,6 +229,20 @@ export let data;
   margin-bottom: 2rem;
 }
 #contents .wrapper .container h3 {margin: .5rem 0 1.5rem;}
+
+
+
+
+#compare .container {
+  width: calc(100vw - var(--padding));
+  height: 66.6vw;
+  margin-bottom: 6rem;
+}
+
+#compare .container .h7 {
+  margin-top: 1rem;
+  opacity: .5;
+}
 
 
 @media screen and (min-width: 720px) {
