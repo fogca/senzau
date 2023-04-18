@@ -32,17 +32,8 @@ html, body {animation: textColor 3s cubic-bezier(1,0,.5,1);}
 }
 
 .first-section {padding-top: 7rem;}
-section,
-.Index section, .Work section, .Product section,
-.About section, .Contact section, .Slug section {padding-left: 25%;}
 
 @media screen and (max-width: 480px) {
-
-    section, .Index section, .Work section, .Product section,
-    .About section, .Contact section, .Slug section {
-        padding-right: var(--padding);
-        padding-left: var(--padding);
-    }
     .first-section {padding-top: 15rem;}
 
     

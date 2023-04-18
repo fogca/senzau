@@ -91,6 +91,9 @@ h6, .h6 {font-size: 1.1rem;}
     "Yu Gothic Medium","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 
+section {padding-left: var(--padding);}
+section {padding-right: var(--padding);}
+
 p, .p {
     letter-spacing: .075em;
     line-height: 2.1;
@@ -132,8 +135,17 @@ main {margin: auto;}
 
 
 @media screen and (min-width: 720px) {
-    html {font-size: 62.5%;}
-    .h0 {font-size: 3.6rem;}
+
+:root {
+
+    --padding: 10.5vw;
+
+}
+
+    
+
+html {font-size: 57.5%;}
+.h0 {font-size: 2.8rem;}
 h1, .h1 {font-size: 2.4rem;}
 h2, .h2 {font-size: 2.0rem;}
 h3, .h3 {font-size: 1.8rem;}
@@ -142,7 +154,7 @@ h5, .h5 {font-size: 1.4rem;}
 h6, .h6 {font-size: 1.2rem;}
 .h7 {font-size: 1.0rem;}
 p, .p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: left;
 }
 .sp {display: none;}
@@ -160,14 +172,11 @@ p, .p {
 
 @media screen and (min-width: 1280px) {
     html {font-size: 62.5%;}
-    .h0 {font-size: 3.6rem;}
-    h1, .h1 {font-size: 2.6rem;}
-    h2, .h2 {font-size: 2.4rem;}
-    h3, .h3 {font-size: 2.2rem;}
-    h4, .h4 {font-size: 1.8rem;}
-    h5, .h5 {font-size: 1.5rem;}
-    h6, .h6 {font-size: 1.3rem;}
-    .h7 {font-size: 1.0rem;}
+}
+
+
+@media screen and (min-width: 1640px) {
+    html {font-size: 72.5%;}
 }
 
 

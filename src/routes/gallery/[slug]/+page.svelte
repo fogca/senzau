@@ -30,7 +30,7 @@
 
 	<section id="slug-top">
 
-        <!--
+    
         <div class="thumbnail">
             <picture>
                 <source srcset="{`${data[0].thumbnail.url}?fm=avif&q=60&width=580`} 1x, {`${data[0].thumbnail.url}?fm=avif&q=85&width=720`} 2x," media="(max-width: 599px)" type="image/avif">
@@ -44,7 +44,7 @@
 			<h1 class="serif" lang="en">{data[0].title}</h1>
 			<h2 class="h5" lang="en">{data[0].scope}</h2>
         </div>
-        -->
+        
     </section>
 
     <section id="slug-body">

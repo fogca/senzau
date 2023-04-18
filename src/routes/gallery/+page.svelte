@@ -21,6 +21,7 @@ export let data;
     <div class="wrapper">
         {#if data[0].contents}
 	    {#each data[0].contents as content}
+        <a href="/gallery/{content.id}/">
 		<div class="container">
             <div class="thumbnail">
                 <picture>
@@ -34,6 +35,7 @@ export let data;
 			
             <div class="h6 info" lang="en">{content.info}</div>
         </div>
+        </a>
         {/each}
         {/if}
     </div>
@@ -69,8 +71,6 @@ export let data;
 
 
 <style>
-
-    .gallery {}
 
     .Logo {
         width: 20.5rem;

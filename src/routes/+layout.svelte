@@ -22,8 +22,8 @@ onMount(async () => {
 </script>
   
 <svelte:head>
-  <link rel="stylesheet" href="../css/base.css?var=1.11">
-  <link rel="stylesheet" href="../css/main.css?var=1.17">
+  <link rel="stylesheet" href="../css/base.css?var=1.12">
+  <link rel="stylesheet" href="../css/main.css?var=1.12">
   <link rel="stylesheet" href="../css/layout.css?var=1.17">
   <link rel="stylesheet" href="../css/mojikumi.css?var=1.16">
   <link rel="stylesheet" href="../css/prerendering.css?var=1.16">
