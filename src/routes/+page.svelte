@@ -111,9 +111,9 @@ export let data;
 
   <div class="container">
   <CompareImage
-    imageLeftSrc="../image/1.jpg"
+    imageLeftSrc="../image/ryo_.jpg"
     imageLeftAlt="left"
-    imageRightSrc="../image/2.jpg"
+    imageRightSrc="../image/ryo@.jpg"
     imageRightAlt="right"
     --handle-size="2.5rem"
     --slider-color="#ffffff"
@@ -124,7 +124,7 @@ export let data;
 
   <div class="container">
     <CompareImage
-      imageLeftSrc="../image/2.jpg"
+      imageLeftSrc="../image/ryo@.jpg"
       imageLeftAlt="left"
       imageRightSrc="../image/1.jpg"
       imageRightAlt="right"
