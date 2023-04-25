@@ -139,17 +139,6 @@ export let data;
 
 
 
-
-
-
-
-  <!--
-  <picture>
-    <source srcset="{`${data.mainImg1.url}?fm=avif&q=40&width=720`} 1x, {`${data.mainImg1.url}?fm=avif&q=75&width=2880`} 2x," type="image/avif">
-    <source srcset="{`${data.mainImg1.url}?fm=webp&q=40&width=720`} 1x, {`${data.mainImg1.url}?fm=webp&q=75&width=2880`} 2x," type="image/webp">
-    <img src={data.mainImg1.url} alt="Project Key Visual">
-  </picture>
-  -->
   
 
 
