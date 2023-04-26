@@ -1,6 +1,8 @@
 <script>
+import LocomotiveScrollProvider from 'svelte-locomotive-scroll';
+import 'locomotive-scroll/src/locomotive-scroll.scss';
 import { onMount } from "svelte";
-
+import { page } from '$app/stores';
 
 
 onMount(() => {
@@ -17,24 +19,81 @@ window.setTimeout(function(){
 </svelte:head>
 
 <main>
-  <section id="about-top" class="first-section">
-    <div class="about-header">
-      <img src="../image/about.webp" alt="">
-      <h1 class="h4 bold">空間にまつわる全てのデザインを、ここで。</h1>
-      <h2 class="h5" lang="en">Designs incorporated with space, with us.</h2>
-    </div>
 
-    <div class="container">
-      <h3 class="h4 bold">在り方、大切にしていること。</h3>
-      <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
-    </div>
+  <LocomotiveScrollProvider
+	options={{
+		smooth: true,
+    smoothMobile: true,
+    smartphone: {
+      smooth: true,
+      direction: "horizontal",  
+      inertia: 0.5
+    },
+    direction: "horizontal",
+		getDirection: true,
+		getSpeed: true,
+		inertia: 0.35
+	}}
+	watch={$page}
+	location={$page.url}
+	onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 2, disableLerp: false })}
+>
+<div data-scroll-section="">
+<section id="about-top" class="first-section">
+  <div class="about-header">
+    <img src="../image/about.webp" alt="">
+    <h1 class="h4 bold">空間にまつわる全てのデザインを、ここで。</h1>
+    <h2 class="h5" lang="en">Designs incorporated with space, with us.</h2>
+  </div>
 
-    <div class="container">
-      <h3 class="h4 bold">在り方、大切にしていること。</h3>
-      <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
-    </div>
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
 
-  </section>
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+
+  <div class="container">
+    <h3 class="h4 bold">在り方、大切にしていること。</h3>
+    <p>ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。どこで生れたかとんと見当がつかぬ。ダミーテキスト - どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  <img src="../image/about.webp" alt="">
+  <img src="../image/about.webp" alt="">
+  <img src="../image/about.webp" alt="">
+  <img src="../image/about.webp" alt="">
+  <img src="../image/about.webp" alt="">
+  <img src="../image/about.webp" alt="">
+  <img src="../image/about.webp" alt="">
+</section>
+</div>
+	
+</LocomotiveScrollProvider>
+
 </main>
 
 

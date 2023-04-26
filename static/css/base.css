@@ -26,7 +26,9 @@
     --padding: 7.5vw;
     --backgroundColor: #E5E4E0;
     --backgroundColor: #E2E1DD;
-    --textColor: #000;
+    --backgroundColor: #E3E3E3;
+    --textColor: #240000;
+    --mainColor: #B40000;
     --darkColor: #34332F;
 }
 
@@ -60,6 +62,7 @@ div, h1, h2, h3, h4, h5, h6, p, a, span, button, tspan {
     letter-spacing: .15em;
     -webkit-font-smoothing: antialiased;
     line-height: 1.8;
+    line-height: 2.0;
 }
 
 a {-webkit-tap-highlight-color: rgba(0,0,0,0);}
@@ -68,7 +71,7 @@ a:active {color: var(--textColor);}
 :lang(en) {
     font-weight: 400;
     letter-spacing: -.015em;
-    line-height: 1.4;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 svg, svg path, svg g {fill: var(--textColor);}

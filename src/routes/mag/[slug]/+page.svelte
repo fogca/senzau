@@ -65,10 +65,9 @@ export let data;
 @keyframes -global-scroll-animation {0% {opacity: 0;}100% {opacity: 1;}}
 
 #mag {
-	background-color: var(--darkColor);
-	background-color:#CBCAC5;
-	background-color: #E2E1DD;
+	background-color: var(--backgroundColor);
 }
+
 
 .article .thumbnail {
 	width: 100vw;
@@ -92,6 +91,15 @@ export let data;
 	*/
 }
 
+
+@media screen and (min-width: 720px) {
+
+
+	.article {
+		width: 82.5%;
+	}
+
+}
 
 
 </style>
