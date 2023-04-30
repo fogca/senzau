@@ -44,4 +44,13 @@ export let data;
 <style>
 
 
+img {
+	transition: 2s ease-in-out;
+}
+a:hover {opacity: 1;}
+a:hover img {
+	filter: invert(1) grayscale(1) contrast(2.2) brightness(.75);
+}
+
+
 </style>
