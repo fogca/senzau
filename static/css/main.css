@@ -1,19 +1,24 @@
 @charset "UTF-8";
 
-/*
-html, body {animation: bgColor 3s cubic-bezier(1,0,.5,1);}
-html, body {animation: textColor 3s cubic-bezier(1,0,.5,1);}
-*/
-
-
-.work-top, .product-top {animation: visualColor 1.5s cubic-bezier(1,0,.5,1);}
-
-.work-top .wrapper .container h2, .serif {
-    font-family: garamond-premier-pro-display, 'Noto Serif JP', '游明朝 Medium', yumincho, yu-mincho, serif;
-    letter-spacing: .05em;
+.l-magazine a.container {margin-bottom: 6rem;}
+.l-magazine a.container img {
+  width: 100vw;
+  margin-bottom: -4rem;
+  height: 60vw;
+  height: auto;
+  margin-left: calc(-1 * var(--padding));
+  aspect-ratio: 16/9;
 }
-.link h2 {display: none;}
-.link .serif {letter-spacing: .03em;}
+.l-magazine a.container:nth-of-type(2) img {width: 80vw;}
+.l-magazine a.container:nth-of-type(3) img {width: 90vw;}
+.l-magazine a.container h5 {margin-top: 1rem;opacity: .5;}
+
+
+
+
+
+
+
 
 @keyframes visualColor {
     0% {filter: saturate(0);}

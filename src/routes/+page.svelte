@@ -134,7 +134,7 @@ export let data;
   <h2 class="h3">マガジン</h2>
   <p class="h6">光の強弱に応じて感光部分のハロゲン化銀に光学的変化が起こりできる不可視の像ー潜像。現代の電子化技術と反転化(リバーサライズ)を通して、</p>
   
-  <div class="wrapper">
+  <div class="wrapper l-magazine">
     <a href="/" class="container">
       <!--   
       <picture>
@@ -186,6 +186,21 @@ export let data;
   </div>
   <a href="/mag" lang="en" class="h5 link">Read All</a>
 </section>
+
+
+<section id="links">
+  <div class="head">
+    <h2 class="h1" lang="en">
+      Digitising - Capture form <br>
+      black metallic silver particles<br> 
+      with over 50MP images
+    </h2>
+    <p class="h6">わたしは、色描写におけるデジタル写真とフィルム写真を明確に区別する流れが非常に不得手です。それは、謂れであるその色描写におけるデジタル写真</p>
+  </div>
+
+</section>
+
+
 
 <section id="compare">
 
@@ -341,17 +356,17 @@ export let data;
   position: relative;
   margin-bottom: 8rem;
 }
-.head {
+#contents .head {
   display: flex;
   flex-direction: column;
   align-items: baseline;
 }
-.head h2, .head h3 {
+#contents .head h2, #contents .head h3 {
   writing-mode: vertical-rl;
   font-feature-settings: initial;
   line-height: 1;
 }
-.head h2 {
+#contents .head h2 {
   letter-spacing: .3em;
 }
 #contents .container .content {width: 77.5%;}
@@ -389,21 +404,7 @@ export let data;
 }
 
 #magazine .wrapper {margin-top: 4rem;}
-#magazine .wrapper a.container {
-  margin-bottom: 6rem;
-}
-#magazine .wrapper a.container img {
-  width: 100vw;
-  margin-bottom: -4rem;
-  height: 60vw;
-  height: auto;
-  margin-left: calc(-1 * var(--padding));
-  aspect-ratio: 16/9;
-}
 
-#magazine .wrapper a.container:nth-of-type(2) img {width: 80vw;}
-#magazine .wrapper a.container:nth-of-type(3) img {width: 90vw;}
-#magazine .wrapper a.container h5 {margin-top: 1rem;opacity: .5;}
 
 
 
@@ -429,27 +430,40 @@ export let data;
 
 @media screen and (min-width: 720px) {
 
-  .l-head div:nth-of-type(1)::after {
-    width: calc(((100vw - var(--padding)*2) / 3) - 100% - 6rem);
-  }
+#magazine {
+  padding-right: 0;
+  padding-top: 15rem;
+  padding-bottom: 12rem;
+}
+.l-magazine {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+#magazine .wrapper.l-magazine a.container img,
+#magazine .wrapper.l-magazine a.container:nth-of-type(2) img,
+#magazine .wrapper.l-magazine a.container:nth-of-type(3) img {
+  width: 100%;
+  margin-left: 0;
+}
 
-  .visual {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: calc(-1 * var(--padding));
-    height: 40vh;
-  }
 
-  .visual img:nth-of-type(1) {
-    width: calc(45vw - .5rem);
-    height: 40vh;
-  }
-  .visual img:nth-of-type(2) {
-    width: 55vw;
-    height: calc(100vh - 8rem - 8rem);
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   #top .wrapper {
     padding-top: calc(100vh - 40vh - 31.5rem - 10rem);
