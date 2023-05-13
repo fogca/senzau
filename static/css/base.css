@@ -158,6 +158,14 @@ ul li {text-decoration: none;list-style: none;}
 main {margin: auto;}
 
 
+@media screen and (max-width: 480px) {
+
+    * {-webkit-text-stroke: 0.015em var(--textColor);}
+    *:lang(en) {-webkit-text-stroke: 0;}
+    
+}
+
+
 @media screen and (min-width: 720px) {
 
 :root {
