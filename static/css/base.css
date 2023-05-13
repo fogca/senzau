@@ -1,11 +1,19 @@
 @charset "UTF-8";
 
-/*
+
 @font-face {
-    font-family: 'asty';
-    src: url('assets/font/Astro.woff2') format('woff2');
+    font-family: 'unvrs';
+    src: url(/font/Univers.woff2) format('woff2');
 }
-*/
+@font-face {
+    font-family: 'RoGMd';
+    src: url(/font/RoGMd.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'RoGBd';
+    src: url(/font/RoGBd.woff2) format('woff2');
+}
+
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
 @font-face { 
@@ -53,6 +61,8 @@ div, h1, h2, h3, h4, h5, h6, p, a, span, button, tspan {
     font-family: neue-haas-unica, TsukuGoPr5-M, TsukuGoPro-M, "Yu Gothic Medium","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     font-family: neue-haas-unica, FOT-筑紫ゴシック Pr5 M, "FOT-筑紫ゴシック Pr5 M", TsukuGoPr5-M, 'TsukuGoPr5-M', "fot-cezanne-pron", sans-serif;
     font-family: "acumin-pro", "Yu Gothic Pr6N D", "fot-cezanne-pron", sans-serif;
+    font-family: 'unvrs', 'RoGMd', 'RoGBd', "Yu Gothic Pr6N D", "fot-cezanne-pron", sans-serif;
+    
     
     font-weight: 400;
     font-style: normal;;
@@ -72,7 +82,7 @@ a:active {color: var(--textColor);}
 :lang(en) {
     font-weight: 400;
     letter-spacing: -.015em;
-    line-height: 1.6;
+    line-height: 1.8;
     -webkit-font-smoothing: antialiased;
 }
 svg, svg path, svg g {fill: var(--textColor);}
@@ -81,10 +91,13 @@ svg, svg path, svg g {fill: var(--textColor);}
 h1, .h1 {font-size: 2.0rem;}
 h2, .h2 {font-size: 1.8rem;}
 h3, .h3 {font-size: 1.6rem;}
-h4, .h4 {font-size: 1.4rem;}
-h5, .h5 {font-size: 1.25rem;}
-h6, .h6 {font-size: 1.1rem;}
-.h7 {font-size: 1.0rem;}
+h4, .h4 {font-size: 1.4rem;font-size: 1.45rem;}
+h5, .h5 {font-size: 1.25rem;font-size: 1.35rem;}
+h6, .h6 {font-size: 1.1rem;font-size: 1.25rem;}
+.h7 {
+    font-size: 1.0rem;
+    font-size: 1.1rem;
+}
 
 .sp {display: block;}
 .pc {display: none;}
@@ -100,10 +113,16 @@ section {padding-right: var(--padding);}
 
 p, .p {
     letter-spacing: .075em;
-    line-height: 2.2;
+    line-height: 2.0;
     font-size: 1.45rem;
     text-align: justify;
+    hyphens: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
+p:lang(en), .p:lang(en) {
+    -webkit-font-smoothing: antialiased;
+}
+
 
 
 li {

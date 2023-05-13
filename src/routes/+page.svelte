@@ -79,11 +79,11 @@ export let data;
       <div class="head">
         <h2 class="h4">活動内容と概要</h2>
         <div class="line"></div>
-        <h3 class="h5" lang="en">Brand Purpose and Goal</h3>
+        <h3 class="h5" lang="en">Activities</h3>
       </div>
       <div class="content">
-        <p class="h6">光の強弱に応じて感光部分のハロゲン化銀に光学的変化が起こりできる不可視の像ー潜像。現代の電子化技術と反転化(リバーサライズ)を通して、フィルムの奥底に眠るさまざまな像を人間では不可視のレベルまで可視化します。光の強弱に応じて感光部分のハロゲン化銀に光学的変化が起こりできる不可視の像ー潜像。</p>
-        <p lang="en" class="h5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining unchanged.</p>
+        <p class="h6">SENZAUは、フィルムがもつ豊かな色彩を現代のフォーマットへと変換し、ネガティブからポジティブへの色現像、そして適切なカラグレーディングを行い、一枚のフィルム写真を像にします。具体的な活動として、●モノクロフィルムの現像、●35mm判・中判フィルムのデジタイズ、そして●ネガティブからリバーサルのデジタルカラー処理を行っています。</p>
+        <p lang="en" class="h5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
       </div>
     </div>
     
@@ -120,7 +120,7 @@ export let data;
       </picture>
       -->
         <img src="../image/1.jpg" alt="">
-        <p class="h6">光の強弱に応じて感光部分のハロゲン化銀に光学的変化が起こりできる不可視の像ー潜像。現代の電子化技術と反転化(リバーサライズ)を通して、フィルムの奥底に眠るさまざまな像を人間では不可視のレベルまで可視化します。光の強弱に応じて感光部分のハロゲン化銀に光学的変化が起こりできる不可視の像ー潜像。</p>
+        <p class="h6">画質というのは実にさまざまな要素が絡み合い、所謂「高画素」や「高感度」などのスペックのみで語ることができないというのは、周知の事実かと思います。しかし、フィルム写真においてはそうした流れを大きく超え、スペックを度外視した空気感のみで語られることがしばしばあります。安易にこうした流れに与するのは、デジタル写真との比較において公正さに欠けるだけでなく、フィルムの真価を損なう流れでもあるように思います。そうした動きの全てを否定する訳ではありませんが、ある程度理解する努力を怠らず、真摯に向きあうべきでもあるように感じます。</p>
         <a href="/mag" lang="en" class="h5 link">About Senzau</a>
       </div>
     </div>
@@ -132,7 +132,7 @@ export let data;
 <section id="magazine">
   <Log />
   <h2 class="h3">マガジン</h2>
-  <p class="h6">光の強弱に応じて感光部分のハロゲン化銀に光学的変化が起こりできる不可視の像ー潜像。現代の電子化技術と反転化(リバーサライズ)を通して、</p>
+  <p class="h6">就寝前、嗜好性・遊戯性の高い写真系のテクストや批評を読み漁るのはとても有意義な時間です。そんな読み物を夢見て、少しずつ写真に関するあれこれをアーカイブしていきます。</p>
   
   <div class="wrapper l-magazine">
     <a href="/" class="container">
@@ -369,7 +369,7 @@ export let data;
 #contents .head h2 {
   letter-spacing: .3em;
 }
-#contents .container .content {width: 77.5%;}
+#contents .container .content {width: 81.5%;}
 #contents .container .content p:nth-of-type(2) {margin-top: 2.5rem;}
 
 
@@ -380,8 +380,7 @@ export let data;
   align-items: flex-start;
   margin: 2.5rem 0 5rem;
 }
-.container:nth-of-type(2) .box div {margin-right: 3.5rem;}
-.container:nth-of-type(2) img {margin-bottom: 3rem;}
+.container:nth-of-type(2) .box div:nth-of-type(1) {margin-right: 3.5rem;}
 .container:nth-of-type(2) a {margin-top: 5rem;}
 
 
