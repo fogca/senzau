@@ -160,7 +160,7 @@ main {margin: auto;}
 
 @media screen and (max-width: 480px) {
 
-    * {-webkit-text-stroke: 0.015em var(--textColor);}
+    * {-webkit-text-stroke: 0.01em var(--textColor);}
     *:lang(en) {-webkit-text-stroke: 0;}
     
 }

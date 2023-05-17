@@ -5,19 +5,12 @@
 
 
 
-#mag .head * {color: var(--mainColor);}
-#mag .body * {color: var(--textColor);}
-#mag .body h2,
-#mag .body h3,
-#mag .body h4 {color: var(--mainColor);}
 
 #mag .body h4 {margin-bottom: 1rem;}
 
 .article .body p {
-  
-  letter-spacing: .01em;
-  line-height: 2.2;
-  font-size: 1.4rem;
+  letter-spacing: .0125em;
+  line-height: 2.35;
+  font-size: 1.35rem;
   text-align: justify;
-
 }

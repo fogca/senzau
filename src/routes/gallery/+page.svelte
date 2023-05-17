@@ -1,6 +1,8 @@
 <script>
 import Saos from "saos";
 import Logo from '../../components/Logo.svelte';
+import LocomotiveScrollProvider from 'svelte-locomotive-scroll';
+import 'locomotive-scroll/src/locomotive-scroll.scss';
 
 
 /** @type {import('./$types').PageData} */
@@ -18,6 +20,18 @@ export let data;
         <Logo />
     </div>
 
+    <LocomotiveScrollProvider
+	    options={{
+	    	smooth: true,
+	    	smoothMobile: true,
+	    	getDirection: true,
+            direction: 'horizontal',
+	    	getSpeed: true,
+	    	inertia: 0.5
+	    }}
+	    onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 2, disableLerp: false })}
+	    imageTarget={'.wrapper'}
+    >
     <div class="wrapper">
         {#if data[0].contents}
 	    {#each data[0].contents as content}
@@ -39,6 +53,7 @@ export let data;
         {/each}
         {/if}
     </div>
+    </LocomotiveScrollProvider>
 	    
 
     <!--
@@ -95,8 +110,8 @@ export let data;
     }
     
     img {
-        width: calc(100vw - var(--padding));
-        filter: grayscale(1) contrast(0.9) brightness(1.1);
+        width: auto;
+        max-height: 80vh;
     }
 
 

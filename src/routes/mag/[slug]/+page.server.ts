@@ -11,6 +11,8 @@ type Post = {
 	body: HTMLElement;
   eng: string;
   seo: string;
+  category: string;
+  introduction: HTMLElement;
 };
 
 type Props = {

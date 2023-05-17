@@ -3,6 +3,9 @@
 	import Saos from "saos";
     import { onDestroy, onMount, afterUpdate } from 'svelte';
     import { browser } from "$app/environment";
+
+    import LocomotiveScrollProvider from 'svelte-locomotive-scroll';
+	import 'locomotive-scroll/src/locomotive-scroll.scss';
     
     onMount(() => {
         
@@ -30,7 +33,20 @@
 
 	<section id="slug-top">
 
-    
+    <LocomotiveScrollProvider
+	    options={{
+	    	smooth: true,
+	    	smoothMobile: true,
+	    	getDirection: true,
+            direction: 'horizontal',
+	    	getSpeed: true,
+	    	inertia: 0.5
+	    }}
+	    onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 2, disableLerp: false })}
+	    imageTarget={'.thumbnail'}
+    >
+        {#if data[0].contents}
+	    {#each data[0].contents as content}
         <div class="thumbnail">
             <picture>
                 <source srcset="{`${data[0].thumbnail.url}?fm=avif&q=60&width=580`} 1x, {`${data[0].thumbnail.url}?fm=avif&q=85&width=720`} 2x," media="(max-width: 599px)" type="image/avif">
@@ -41,35 +57,17 @@
             </picture>
         </div>
         <div class="info">
-			<h1 class="serif" lang="en">{data[0].title}</h1>
-			<h2 class="h5" lang="en">{data[0].scope}</h2>
+	        <h1 class="serif" lang="en">{data[0].title}</h1>
+	        <h2 class="h5" lang="en">{data[0].scope}</h2>
         </div>
+        {/each}
+        {/if}
         
+    </LocomotiveScrollProvider>
+
     </section>
 
-    <section id="slug-body">
-        <div class="wrapper">
-            <!--
-            <div class="body">
-                <div class="paragraph">
-                    {@html data[0].body}
-                </div>
-                {#if data[0].repeatImg}
-		        {#each data[0].repeatImg as repeat}
-                <Saos once={true} animation={"scroll-animation 3.0s cubic-bezier(.6,0,.2,1) both"}>
-                <picture>
-                    <source srcset="{`${repeat.images.url}?fm=avif&q=60&width=580`} 1x, {`${repeat.images.url}?fm=avif&q=75&width=720`} 2x," media="(max-width: 599px)" type="image/avif">
-                    <source srcset="{`${repeat.images.url}?fm=avif&q=60&width=580`} 1x, {`${repeat.images.url}?fm=avif&q=75&width=1440`} 2x," media="(min-width: 600px)" type="image/avif">
-                    <source srcset="{`${repeat.images.url}?fm=webp&q=60&width=580`} 1x, {`${repeat.images.url}?fm=webp&q=75&width=720`} 2x," media="(max-width: 599px)" type="image/webp">
-                    <source srcset="{`${repeat.images.url}?fm=webp&q=60&width=580`} 1x, {`${repeat.images.url}?fm=webp&q=75&width=1440`} 2x," media="(min-width: 600px)" type="image/webp">
-                    <img data-src={repeat.images.url} alt="{data[0].title}" use:lazyImage={{ threshold: 0.5 }}>
-                </picture>
-                </Saos>
-		        {/each}
-                {/if}
-            -->
-        </div>
-    </section>
+
 
 
 </article>
